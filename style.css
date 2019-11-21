@@ -1,0 +1,37 @@
+body {
+    background-image: url(bg.jpg);
+    font-family: tahoma;
+}
+
+#container {
+    background-color: white;
+    margin: 100px auto;
+    width: 50%;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#task {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+#btn {
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
