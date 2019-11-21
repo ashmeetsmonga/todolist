@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ToDo</title>
 </head>
 <body>
     <div id="container">
@@ -26,7 +26,6 @@
         e.preventDefault();
         var task = document.getElementById('task').value;
         var params = "name="+task;
-
         xhr = new XMLHttpRequest();
         xhr.open('POST', 'add.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
