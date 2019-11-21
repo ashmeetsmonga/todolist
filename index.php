@@ -14,12 +14,23 @@
         <li>Go Study</li>
         <li>Go Play</li>
         </ul>
-        <form method="POST">
+        <form id='postform' method="POST">
             <input type="text" name="task" id="task" placeholder = "Enter task" required autocomplete = "off">
             <input type="submit" value="Add" id="btn">
         </form>
     </div>
-    
-
 </body>
+<script>
+    document.getElementById('btn').addEventListener('click', posttask);
+    function posttask(e) {
+        e.preventDefault();
+        var task = document.getElementById('task').value;
+        var params = "name="+task;
+
+        xhr = new XMLHttpRequest();
+        xhr.open('POST', 'add.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(params);
+    }
+</script>
 </html>
