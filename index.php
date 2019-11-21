@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the beginning</h1>
+    <div id="container">
+        <h1>Todo List</h1>
+        <ul>
+        <li>Go Study</li>
+        <li>Go Play</li>
+        </ul>
+    </div>
+    
+
 </body>
 </html>
