@@ -7,9 +7,15 @@ $(document).ready(function() {
             type: "POST",
             url: "add.php",
             data: data,
-            success: function (response) {}
+            dataType: "JSON",
+            success: function (response) {
+                var tasks = '';
+                $.each(response, function (i, task) {
+                    tasks = tasks + "<li>" + task[1] + "</li>";
+                });
+                $('#list').html(tasks);
+            }
         });
-
         $('#task').val('');
 
         return false;
