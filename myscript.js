@@ -1,10 +1,17 @@
-document.getElementById('btn').addEventListener('click', posttask);
-    function posttask(e) {
-        e.preventDefault();
-        var task = document.getElementById('task').value;
-        var params = "name="+task;
-        xhr = new XMLHttpRequest();
-        xhr.open('POST', 'add.php', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send(params);
-    }
+$(document).ready(function() {
+    $("#postform").on('submit', function() {
+        var data = {
+            task: $('#task').val()
+        };
+        $.ajax({
+            type: "POST",
+            url: "add.php",
+            data: data,
+            success: function (response) {}
+        });
+
+        $('#task').val('');
+
+        return false;
+    });
+});
